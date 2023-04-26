@@ -1,9 +1,18 @@
+body{
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+}
+
 /* Estilos para o cabeçalho */
+
 header {
-    background-color: #f44336;
+    background-color: #0f839d;
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding:0;
+
+    /* padding: 20px; */
+    /* text-align: center; */
 }
 
 /* Estilos para a navegação */
@@ -18,7 +27,7 @@ nav ul {
 }
 
 nav a {
-    color: #f44336;
+    color: #2c0603;
     text-decoration: none;
     padding: 10px;
 }
