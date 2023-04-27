@@ -17,6 +17,12 @@ const produtos = [
       descricao: "Refrigerante à base de cola.",
       preco: 5.00,
       imagem: "https://meucarrinho.delivery/media/4166/coca-cola-lata-350ml.jpg"
+    },
+    {
+      nome: "Hot Dog",
+      descricao: "cooked sausage, hot dog bun, ketchup, mustard, chopped onion",
+      preco: 12.50,
+      imagem: "https://meucarrinho.delivery/media/4698/hamburguer.jpg"
     }
   ];
   

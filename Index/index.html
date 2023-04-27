@@ -9,8 +9,10 @@
 	<link rel="stylesheet" href="style.css">
 	</link>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-G/QjEEz6mzJMeTj0m0W8uEaX9LYzkr4b4j1wW8sLPSQf3qKuV7Q86GgCsdV7X1Bp/1z/ovJBBWkZed/EInsoqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -140,10 +142,60 @@
 			<div class="modal-footer">
 				<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
 			  </div>
-
+		</div>
+		<div class="owl-carousel">
+		<div><ul id="produtos"></ul></div>
+		<div class="container">
+			<h2>Produtos</h2>
+			<div class="row">
+			  <div class="col-md-4 ">
+				<div class="card h-70">
+				  <img src="./img/ant-burger.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+					<h5 class="card-title">Ant Burger</h5>
+					<p class="card-text">Bun with sesame seeds, beef patty, lettuce, tomato, cheese and special sauce.</p>
+					<a href="#" class="btn btn-primary">Add to Cart</a>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4">
+				<div class="card">
+				  <img src="./img/french-fries.jpeg" class="card-img-top" alt="...">
+				  <div class="card-body">
+					<h5 class="card-title">French Fries</h5>
+					<p class="card-text">Potato cut into sticks, crispy and dry.</p>
+					<a href="#" class="btn btn-primary">Add to Cart</a>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4">
+				<div class="card">
+				  <img src="./img/coke-soda.png" class="card-img-top" alt="...">
+				  <div class="card-body">
+					<h5 class="card-title">Coke Soda</h5>
+					<p class="card-text">Cola based soda.</p>
+					<a href="#" class="btn btn-primary">Add to Cart</a>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4">
+				<div class="card">
+				  <img src="./img/hot-dog.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+					<h5 class="card-title">Hot Dog</h5>
+					<p class="card-text">cooked sausage, hot dog bun, ketchup, mustard, chopped onion.</p>
+					<a href="#" class="btn btn-primary">Add to Cart</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</main>
 
 
 		<script src="scripts.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-kXgrkyz4x4x4sIz8sVQ2bU6INLr6rWJyTDYvYQoUoxHgxzC0m0ZBhUZmD0L+O5H5oKxlFg/9Xqhr3++lNuOQKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://kit.fontawesome.com/f64e76efbd.js" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
 			document.addEventListener('DOMContentLoaded', function () {
@@ -157,7 +209,33 @@
 				var instances = M.Dropdown.init(elems, options);
 			});
 		</script>
-
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+ <script>
+   $(document).ready(function() {
+	 $('.slider').slick({
+	   arrows: true,
+	   dots: false,
+	   infinite: true,
+	   slidesToShow: 3,
+	   slidesToScroll: 1,
+	   responsive: [
+		 {
+		   breakpoint: 992,
+		   settings: {
+			 slidesToShow: 2
+		   }
+		 },
+		 {
+		   breakpoint: 768,
+		   settings: {
+			 slidesToShow: 1
+		   }
+		 }
+	   ]
+	 });
+   });
+ </script>
 </body>
 
 </html>
