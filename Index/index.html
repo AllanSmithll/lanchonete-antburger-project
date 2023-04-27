@@ -1,74 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ant's Burger</title>
-    <link rel="stylesheet" href="style.css"></link>
-    
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ant's Burger</title>
+	<link rel="stylesheet" href="style.css">
+	</link>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
 </head>
+
 <body>
-    <header>
+
+	<header class="nav-extended">
 		<section id="cabecalho">
-			
-			<div id="logo">
-				<img class="empresaLogo" src=""/>
+			<div id="logo" class="">
+				<img class="empresaLogo" src="./img/Logo.jpg" />
 				<p class="empresaTitulo">Ant's Burger</p>
 			</div>
+
+
+			<div id="userChoices">
+
+				<div class="caixaIcon">
+
+					<span class=" badge">0</span>
+					<a class="dropdown-trigger waves-effect waves-light btn-small " data-target='dropdownCarrinho'
+						id="carrinho" style="color: #959697;">
+						<i class="collection-item icon fa-solid fa-cart-shopping"></i><i
+							class="fa-sharp fa-solid fa-caret-down"></i>
+					</a>
+					<!-- Dropdown Structure -->
+					<ul id='dropdownCarrinho' class='dropdown-content'>
+						<li>
+							<p>produtos</p>
+						</li>
+						<li class="divider" tabindex="-1"></li>
+
+						<li class="divider" tabindex="-1"></li>
+						<li>
+							<p>Quantidade: 0</p>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="caixaIcon">
+
+					<span class=" badge">0</span>
+					<a class="dropdown-trigger waves-effect waves-light btn-small " data-target='dropdownCupom'
+						id="cupom">
+						<i class="icon fa-solid fa-ticket" style="color: #959697;"></i><i
+							class="fa-sharp fa-solid fa-caret-down"></i>
+					</a>
+					<!-- DropdownCupom Structure -->
+					<ul id='dropdownCupom' class='dropdown-content'>
+						<li>
+							<p>Cupons</p>
+						</li>
+						<li class="divider" tabindex="-1"></li>
+
+						<li class="divider" tabindex="-1"></li>
+						<li>
+							<p>Quantidade: 0</p>
+						</li>
+
+					</ul>
+				</div>
+
+
+				<div class="caixaIcon">
+					<a class="dropdown-trigger waves-effect waves-light btn-small " data-target='dropdownUsuario'
+						id="usuario">
+						<i class="icon fa-regular fa-user"></i>
+						<i class="fa-sharp fa-solid fa-caret-down"></i>
+						</i>
+					</a>
+					<!-- Dropdown Structure -->
+					<ul id='dropdownUsuario' class='dropdown-content'>
+						<li><a href="#!">Cadastrar</a></li>
+						<li><a href="#!">Login</a></li>
+						<li class="divider" tabindex="-1"></li>
+
+					</ul>
+				</div>
 		</section>
-		<nav>
-			<ul>
-				<li><a href="#">Início</a></li>
-				<li><a href="#">Produtos</a></li>
-				<li><a href="#">Sobre</a></li>
-				<li><a href="#">Contato</a></li>
+		<div class="nav-content z-depth-4">
+			<ul class="tabs tabs-transparent">
+				<li class="tab"><a href="#">Localização</a></li>
+
+				<ul id="socialDropDown" class="dropdown-content">
+					<li><a href="#!">instagram</a></li>
+					<li class="divider"></li>
+					<li><a href="#!">twiter</a></li>
+					<li class="divider"></li>
+					<li><a href="#!">linkedin</a></li>
+				</ul>
+
+				<li class="tab"><a class="dropdown-trigger" data-target="socialDropDown">Redes Sociais <i
+							class="fa-sharp fa-solid fa-caret-down"></i></a> </li>
+				<li class="tab"><a class="" href="#">Contatos</a></li>
+
+				<li class="tab  modal-trigger"><a href="#Sobre">Sobre</a></li>
 			</ul>
-		</nav>
+		</div>
+
+		<section></section>
 	</header>
 	<main>
-		<section>
-			<h2>Produtos</h2>
-			<ul>
-				<li>
-					<h3>Hambúrguer</h3>
-					<p>Pão francês, salsicha, queijo, bacon, milho, ervilha, batata palha e molho de tomate.</p>
-					<p>R$ 12,00</p>
-					<button>Adicionar ao carrinho</button>
-				</li>
-				<li>
-					<h3>Batata Frita</h3>
-					<p>Batatas fritas crocantes e douradas.</p>
-					<p>R$ 7,00</p>
-					<button>Adicionar ao carrinho</button>
-				</li>
-				<li>
-					<h3>Coca-Cola</h3>
-					<p>Refresco à base de cola.</p>
-					<p>R$ 5,00</p>
-					<button>Adicionar ao carrinho</button>
-				</li>
-				<li>
-					<h3>Água</h3>
-					<p>Água mineral sem gás.</p>
-					<p>R$ 3,00</p>
-					<button>Adicionar ao carrinho</button>
-				</li>
-				<li>
-					<h3>Sorvete</h3>
-					<p>Sabor chocolate com flocos crocantes e pedaços de brownie.</p>
-					<p>R$ 15,00</p>
-					<button>Adicionar ao carrinho</button>
-				</li>
-				<li>
-					<h3>Guaraná Antarctica</h3>
-					<p>Refrigerante à base de guaraná.</p>
-					<p>R$ 5,00</p>
-					<button>Adicionar ao carrinho</button>
-			</li>
-        </ul>
-    </section>
+		<div class="search-container">
+			<input type="text" placeholder="Vá direto ao lanche...">
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</div>
 
-	<script src="scripts.js"></script>
+
+
+		  <div id="Sobremodal" class="modal">
+    		<div class="modal-content">				
+				<h4>Sobre Nós</h4>
+				<section class="intro-section">
+					<div class="intro-image">
+					  <img src="./img/Apressentacao.jpg">
+					</div>
+					<div class="intro-text">
+					  <h2>Somos as melhores formigas cozinheiras deste Brasil!</h2>
+					  <p>Venha provar dos nossos melhores podrões! Possuimos diferentes tipos de sanduíches, sovertes, bolos e muito mais! Funcionamos agora em delivery.</p>
+					  <ul class="restaurant-info">
+						<li><i class="fas fa-map-marker-alt"></i>Endereço: Rua Lucas Martins, 590 - Frente a escola Fernando Alvares.</li>
+						<li><i class="fas fa-phone"></i>Telefone: (83) 9XXXX-YYYY</li>
+						<li><i class="fab fa-instagram"></i>Instagram: @CuriandoVidas</li>
+						<li><i class="far fa-clock"></i>Horário de atendimento: Segunda a Sexta, das 17h às 22h</li>
+					  </ul>
+					</div>
+				  </section>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+			  </div>
+
+
+
+		<script src="scripts.js"></script>
+		<script src="https://kit.fontawesome.com/f64e76efbd.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+			document.addEventListener('DOMContentLoaded', function () {
+				var elems = document.querySelectorAll('.dropdown-trigger');
+				var instances = M.Dropdown.init(elems, options);
+			});
+		</script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				var elems = document.querySelectorAll('.dropdown-trigger');
+				var instances = M.Dropdown.init(elems, options);
+			});
+		</script>
+
 </body>
+
 </html>
